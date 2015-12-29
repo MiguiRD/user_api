@@ -1,0 +1,6 @@
+@(telefonos: List[Telefono])
+<telefonos>
+	@for(t <- telefonos) {
+		@_telefono(t)
+	}
+</telefonos>

@@ -1,0 +1,5 @@
+@(telefono: Telefono)
+<telefono id="@telefono.getId()">
+	<numero>@telefono.getNumero()</numero>
+	<movil>@telefono.getMovil()</movil>
+</telefono>

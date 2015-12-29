@@ -1,0 +1,14 @@
+GET     /                                     controllers.Application.index()
+
+GET     /usuarios/$pag<[0-9]*>                controllers.Usuarios.index(pag: Integer)
+GET     /usuario/$uId<[0-9]*>                 controllers.Usuarios.retrieve(uId: Long)
+POST    /usuario                              controllers.Usuarios.create()
+DELETE  /usuario/$uId<[0-9]*>                 controllers.Usuarios.delete(uId: Long)
+PUT     /usuario/$uId<[0-9]*>                 controllers.Usuarios.update(uId: Long)
+
+GET     /usuario/$uId<[0-9]*>/telefonos              controllers.Telefonos.index(uId: Long)
+POST    /usuario/$uId<[0-9]*>/telefono               controllers.Telefonos.create(uId: Long)
+DELETE  /usuario/$uId<[0-9]*>/telefono/$tId<[0-9]*>  controllers.Telefonos.delete(uId: Long, tId: Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

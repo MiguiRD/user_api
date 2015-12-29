@@ -1,0 +1,10 @@
+@(usuario: Usuario)
+<usuario id="@usuario.getId()">
+	<nombre>@usuario.getNombre()</nombre>
+	<apellidos>@usuario.getApellidos()</apellidos>
+	<telefonos>
+		@for(t <- usuario.getTelefonos()) {
+			@_telefono(t)
+		}
+	</telefonos>
+</usuario>

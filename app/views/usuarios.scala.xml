@@ -1,0 +1,9 @@
+@(usuarios: List[Usuario], count: Integer)
+<usuarios>
+	<count>@count</count>
+	<pagina>
+		@for(u <- usuarios) {
+			@_usuario(u)
+		}
+	</pagina>
+</usuarios>
